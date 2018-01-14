@@ -56,7 +56,7 @@ def execute_commands(commands, limit=0, duration=0, delay=0):
         if duration and time.time() - begin_ts > duration:
             break
         if delay:
-            t_delay = min(delay * 3, gamma(3, delay/3))
+            t_delay = min(delay * 4, gamma(3, delay/3))
             time.sleep(t_delay)
             logging.debug("Random delay: {}s".format(t_delay))
         commands[ip[0]].execute(ip)
@@ -72,6 +72,7 @@ if __name__ == "__main__":
     MACRO_FILE = ARGS.filename
     commands = list(parse_file(MACRO_FILE))
     logging.debug("Commands: {}".format(', '.join(str(c) for c in commands)))
+    time.sleep(0.5)
     execute_commands(
         commands,
         limit=ARGS.lim,
