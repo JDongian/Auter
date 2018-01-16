@@ -1,4 +1,7 @@
-from cmd import WaitCmd, GoToCmd, MouseClickCmd, KeyPressCmd
+from cmd import (
+    WaitCmd, GoToCmd,
+    MouseClickCmd,
+    KeyPressCmd, KeyPressDownCmd, KeyPressUpCmd)
 from pymouse import PyMouse
 from pykeyboard import PyKeyboard
 
@@ -43,6 +46,16 @@ def parse_lines(lines):
             else:
                 kwargs = {'duration': float(dur[0])}
             yield KeyPressCmd(k=k, code=code, **kwargs)
+        elif cmd == "press_down":
+            assert len(args) == 1
+            code, = args
+            code = int(code)
+            yield KeyPressDownCmd(k=k, code=code)
+        elif cmd == "press_up":
+            assert len(args) == 1
+            code, = args
+            code = int(code)
+            yield KeyPressUpCmd(k=k, code=code)
 
 
 def parse_file(filename):

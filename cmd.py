@@ -57,3 +57,23 @@ class KeyPressCmd(Cmd):
         self.k.press_key(self.code)
         time.sleep(self.duration)
         self.k.release_key(self.code)
+
+
+class KeyPressDownCmd(Cmd):
+    def __init__(self, k, code):
+        self.k = k  # pykeyboard
+        self.code = code
+
+    def execute(self, *args):
+        self.log()
+        self.k.press_key(self.code)
+
+
+class KeyPressUpCmd(Cmd):
+    def __init__(self, k, code):
+        self.k = k  # pykeyboard
+        self.code = code
+
+    def execute(self, *args):
+        self.log()
+        self.k.release_key(self.code)

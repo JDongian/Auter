@@ -62,6 +62,7 @@ def execute_commands(commands, limit=0, duration=0, delay=0):
         commands[ip[0]].execute(ip)
         # advance instruction pointer
         ip[0] += 1
+    return count
 
 
 if __name__ == "__main__":
@@ -73,8 +74,12 @@ if __name__ == "__main__":
     commands = list(parse_file(MACRO_FILE))
     logging.debug("Commands: {}".format(', '.join(str(c) for c in commands)))
     time.sleep(0.5)
-    execute_commands(
+    ts_start = time.time()
+    c = execute_commands(
         commands,
         limit=ARGS.lim,
         duration=ARGS.dur,
         delay=ARGS.delay)
+    ts_end = time.time()
+    print("Elapsed time: {dt}".format(dt=ts_end - ts_start))
+    print("Instructions executed: {c}".format(c=c))

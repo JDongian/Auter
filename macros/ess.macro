@@ -1,0 +1,4 @@
+press_down 18
+click 1 1344 243
+wait 55
+goto 1

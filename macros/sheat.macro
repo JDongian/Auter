@@ -1,0 +1,60 @@
+click 1 1442 460
+wait 0.88
+
+# fill bag
+click 2 1327 119
+wait 0.08
+click 1 1323 158
+wait 0.58
+
+# load inventory
+press 10
+wait 0.78
+
+# handle inventory
+press 10
+click 1 1409 216
+wait 0.5
+press 10
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+wait 1.2
+press 10
+wait 0.01
+click 1 1409 216
+
+# (2.4 - 0.5 - 0.1 * 9 - 0.03 * 20 )
+wait 0.42
+
+goto 0
