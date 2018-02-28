@@ -1,0 +1,13 @@
+click 1 1405 390
+wait 2.2
+press 11
+wait 1.6
+
+click 1 1411 211
+wait 0.06
+click 1 1405 245
+wait 1
+press 65
+wait 16.1
+
+goto 0

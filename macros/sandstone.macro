@@ -1,0 +1,10 @@
+wait 1
+press 10
+wait 0.05
+press 11
+wait 0.05
+press 12
+wait 0.05
+press 13
+wait 0.05
+goto 0

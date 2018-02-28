@@ -33,7 +33,7 @@ class GoToCmd(Cmd):
 
 
 class MouseClickCmd(Cmd):
-    def __init__(self, m, button, x, y, duration=0.03):
+    def __init__(self, m, button, x, y, duration=0.05):
         self.m = m  # pymouse
         self.button = button
         self.x, self.y = x, y
@@ -47,7 +47,7 @@ class MouseClickCmd(Cmd):
 
 
 class KeyPressCmd(Cmd):
-    def __init__(self, k, code, duration=0.03):
+    def __init__(self, k, code, duration=0.05):
         self.k = k  # pykeyboard
         self.code = code
         self.duration = duration

@@ -1,0 +1,9 @@
+click 1 389 504
+wait 1
+press 11
+wait 1.7
+click 2 389 504
+wait 0.03
+click 1 388 562
+wait 1.6
+goto 0

@@ -1,0 +1,9 @@
+wait 1
+press 48
+wait 2.9
+click 1 289 137
+wait 8
+press 11
+wait 3
+press 18
+wait 2
